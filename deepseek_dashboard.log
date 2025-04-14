@@ -326,3 +326,171 @@ Traceback (most recent call last):
   File "C:\Users\Administrator\PycharmProjects\deepseek-assistant-main\.venv\lib\site-packages\requests\adapters.py", line 513, in send
     raise ProxyError(e, request=request)
 requests.exceptions.ProxyError: HTTPSConnectionPool(host='platform.deepseek.com', port=443): Max retries exceeded with url: /api_keys (Caused by ProxyError('Unable to connect to proxy', OSError(0, 'Error')))
+2025-04-14 16:10:31,307 - DeepSeekDashboard - INFO - Sending 2 messages to DeepSeek API...
+2025-04-14 16:10:31,349 - DeepSeekDashboard - ERROR - API request failed: HTTPSConnectionPool(host='platform.deepseek.com', port=443): Max retries exceeded with url: /api_keys (Caused by ProxyError('Unable to connect to proxy', OSError(0, 'Error')))
+Traceback (most recent call last):
+  File "C:\Users\Administrator\PycharmProjects\deepseek-assistant-main\.venv\lib\site-packages\urllib3\connectionpool.py", line 777, in urlopen
+    self._prepare_proxy(conn)
+  File "C:\Users\Administrator\PycharmProjects\deepseek-assistant-main\.venv\lib\site-packages\urllib3\connectionpool.py", line 1046, in _prepare_proxy
+    conn.connect()
+  File "C:\Users\Administrator\PycharmProjects\deepseek-assistant-main\.venv\lib\site-packages\urllib3\connection.py", line 619, in connect
+    self.sock = sock = self._connect_tls_proxy(self.host, sock)
+  File "C:\Users\Administrator\PycharmProjects\deepseek-assistant-main\.venv\lib\site-packages\urllib3\connection.py", line 692, in _connect_tls_proxy
+    tls_in_tls=False,
+  File "C:\Users\Administrator\PycharmProjects\deepseek-assistant-main\.venv\lib\site-packages\urllib3\connection.py", line 793, in _ssl_wrap_socket_and_match_hostname
+    tls_in_tls=tls_in_tls,
+  File "C:\Users\Administrator\PycharmProjects\deepseek-assistant-main\.venv\lib\site-packages\urllib3\util\ssl_.py", line 471, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(sock, context, tls_in_tls, server_hostname)
+  File "C:\Users\Administrator\PycharmProjects\deepseek-assistant-main\.venv\lib\site-packages\urllib3\util\ssl_.py", line 515, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\ssl.py", line 423, in wrap_socket
+    session=session
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\ssl.py", line 870, in _create
+    self.do_handshake()
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\ssl.py", line 1139, in do_handshake
+    self._sslobj.do_handshake()
+OSError: [Errno 0] Error
+
+The above exception was the direct cause of the following exception:
+
+urllib3.exceptions.ProxyError: ('Unable to connect to proxy', OSError(0, 'Error'))
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\PycharmProjects\deepseek-assistant-main\.venv\lib\site-packages\requests\adapters.py", line 497, in send
+    chunked=chunked,
+  File "C:\Users\Administrator\PycharmProjects\deepseek-assistant-main\.venv\lib\site-packages\urllib3\connectionpool.py", line 846, in urlopen
+    method, url, error=new_e, _pool=self, _stacktrace=sys.exc_info()[2]
+  File "C:\Users\Administrator\PycharmProjects\deepseek-assistant-main\.venv\lib\site-packages\urllib3\util\retry.py", line 515, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='platform.deepseek.com', port=443): Max retries exceeded with url: /api_keys (Caused by ProxyError('Unable to connect to proxy', OSError(0, 'Error')))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\PycharmProjects\deepseek-assistant-main\app-streamlit.py", line 98, in query_deepseek
+    response = requests.post(API_URL, headers=headers, json=payload)
+  File "C:\Users\Administrator\PycharmProjects\deepseek-assistant-main\.venv\lib\site-packages\requests\api.py", line 115, in post
+    return request("post", url, data=data, json=json, **kwargs)
+  File "C:\Users\Administrator\PycharmProjects\deepseek-assistant-main\.venv\lib\site-packages\requests\api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "C:\Users\Administrator\PycharmProjects\deepseek-assistant-main\.venv\lib\site-packages\requests\sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\Administrator\PycharmProjects\deepseek-assistant-main\.venv\lib\site-packages\requests\sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\Administrator\PycharmProjects\deepseek-assistant-main\.venv\lib\site-packages\requests\adapters.py", line 513, in send
+    raise ProxyError(e, request=request)
+requests.exceptions.ProxyError: HTTPSConnectionPool(host='platform.deepseek.com', port=443): Max retries exceeded with url: /api_keys (Caused by ProxyError('Unable to connect to proxy', OSError(0, 'Error')))
+2025-04-14 16:11:18,027 - DeepSeekDashboard - INFO - Sending 2 messages to DeepSeek API...
+2025-04-14 16:11:18,061 - DeepSeekDashboard - ERROR - API request failed: HTTPSConnectionPool(host='platform.deepseek.com', port=443): Max retries exceeded with url: /api_keys (Caused by ProxyError('Unable to connect to proxy', OSError(0, 'Error')))
+Traceback (most recent call last):
+  File "C:\Users\Administrator\PycharmProjects\deepseek-assistant-main\.venv\lib\site-packages\urllib3\connectionpool.py", line 777, in urlopen
+    self._prepare_proxy(conn)
+  File "C:\Users\Administrator\PycharmProjects\deepseek-assistant-main\.venv\lib\site-packages\urllib3\connectionpool.py", line 1046, in _prepare_proxy
+    conn.connect()
+  File "C:\Users\Administrator\PycharmProjects\deepseek-assistant-main\.venv\lib\site-packages\urllib3\connection.py", line 619, in connect
+    self.sock = sock = self._connect_tls_proxy(self.host, sock)
+  File "C:\Users\Administrator\PycharmProjects\deepseek-assistant-main\.venv\lib\site-packages\urllib3\connection.py", line 692, in _connect_tls_proxy
+    tls_in_tls=False,
+  File "C:\Users\Administrator\PycharmProjects\deepseek-assistant-main\.venv\lib\site-packages\urllib3\connection.py", line 793, in _ssl_wrap_socket_and_match_hostname
+    tls_in_tls=tls_in_tls,
+  File "C:\Users\Administrator\PycharmProjects\deepseek-assistant-main\.venv\lib\site-packages\urllib3\util\ssl_.py", line 471, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(sock, context, tls_in_tls, server_hostname)
+  File "C:\Users\Administrator\PycharmProjects\deepseek-assistant-main\.venv\lib\site-packages\urllib3\util\ssl_.py", line 515, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\ssl.py", line 423, in wrap_socket
+    session=session
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\ssl.py", line 870, in _create
+    self.do_handshake()
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\ssl.py", line 1139, in do_handshake
+    self._sslobj.do_handshake()
+OSError: [Errno 0] Error
+
+The above exception was the direct cause of the following exception:
+
+urllib3.exceptions.ProxyError: ('Unable to connect to proxy', OSError(0, 'Error'))
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\PycharmProjects\deepseek-assistant-main\.venv\lib\site-packages\requests\adapters.py", line 497, in send
+    chunked=chunked,
+  File "C:\Users\Administrator\PycharmProjects\deepseek-assistant-main\.venv\lib\site-packages\urllib3\connectionpool.py", line 846, in urlopen
+    method, url, error=new_e, _pool=self, _stacktrace=sys.exc_info()[2]
+  File "C:\Users\Administrator\PycharmProjects\deepseek-assistant-main\.venv\lib\site-packages\urllib3\util\retry.py", line 515, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='platform.deepseek.com', port=443): Max retries exceeded with url: /api_keys (Caused by ProxyError('Unable to connect to proxy', OSError(0, 'Error')))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\PycharmProjects\deepseek-assistant-main\app-streamlit.py", line 98, in query_deepseek
+    response = requests.post(API_URL, headers=headers, json=payload)
+  File "C:\Users\Administrator\PycharmProjects\deepseek-assistant-main\.venv\lib\site-packages\requests\api.py", line 115, in post
+    return request("post", url, data=data, json=json, **kwargs)
+  File "C:\Users\Administrator\PycharmProjects\deepseek-assistant-main\.venv\lib\site-packages\requests\api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "C:\Users\Administrator\PycharmProjects\deepseek-assistant-main\.venv\lib\site-packages\requests\sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\Administrator\PycharmProjects\deepseek-assistant-main\.venv\lib\site-packages\requests\sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\Administrator\PycharmProjects\deepseek-assistant-main\.venv\lib\site-packages\requests\adapters.py", line 513, in send
+    raise ProxyError(e, request=request)
+requests.exceptions.ProxyError: HTTPSConnectionPool(host='platform.deepseek.com', port=443): Max retries exceeded with url: /api_keys (Caused by ProxyError('Unable to connect to proxy', OSError(0, 'Error')))
+2025-04-14 16:11:19,025 - DeepSeekDashboard - INFO - Sending 2 messages to DeepSeek API...
+2025-04-14 16:11:19,055 - DeepSeekDashboard - ERROR - API request failed: HTTPSConnectionPool(host='platform.deepseek.com', port=443): Max retries exceeded with url: /api_keys (Caused by ProxyError('Unable to connect to proxy', OSError(0, 'Error')))
+Traceback (most recent call last):
+  File "C:\Users\Administrator\PycharmProjects\deepseek-assistant-main\.venv\lib\site-packages\urllib3\connectionpool.py", line 777, in urlopen
+    self._prepare_proxy(conn)
+  File "C:\Users\Administrator\PycharmProjects\deepseek-assistant-main\.venv\lib\site-packages\urllib3\connectionpool.py", line 1046, in _prepare_proxy
+    conn.connect()
+  File "C:\Users\Administrator\PycharmProjects\deepseek-assistant-main\.venv\lib\site-packages\urllib3\connection.py", line 619, in connect
+    self.sock = sock = self._connect_tls_proxy(self.host, sock)
+  File "C:\Users\Administrator\PycharmProjects\deepseek-assistant-main\.venv\lib\site-packages\urllib3\connection.py", line 692, in _connect_tls_proxy
+    tls_in_tls=False,
+  File "C:\Users\Administrator\PycharmProjects\deepseek-assistant-main\.venv\lib\site-packages\urllib3\connection.py", line 793, in _ssl_wrap_socket_and_match_hostname
+    tls_in_tls=tls_in_tls,
+  File "C:\Users\Administrator\PycharmProjects\deepseek-assistant-main\.venv\lib\site-packages\urllib3\util\ssl_.py", line 471, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(sock, context, tls_in_tls, server_hostname)
+  File "C:\Users\Administrator\PycharmProjects\deepseek-assistant-main\.venv\lib\site-packages\urllib3\util\ssl_.py", line 515, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\ssl.py", line 423, in wrap_socket
+    session=session
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\ssl.py", line 870, in _create
+    self.do_handshake()
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\ssl.py", line 1139, in do_handshake
+    self._sslobj.do_handshake()
+OSError: [Errno 0] Error
+
+The above exception was the direct cause of the following exception:
+
+urllib3.exceptions.ProxyError: ('Unable to connect to proxy', OSError(0, 'Error'))
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\PycharmProjects\deepseek-assistant-main\.venv\lib\site-packages\requests\adapters.py", line 497, in send
+    chunked=chunked,
+  File "C:\Users\Administrator\PycharmProjects\deepseek-assistant-main\.venv\lib\site-packages\urllib3\connectionpool.py", line 846, in urlopen
+    method, url, error=new_e, _pool=self, _stacktrace=sys.exc_info()[2]
+  File "C:\Users\Administrator\PycharmProjects\deepseek-assistant-main\.venv\lib\site-packages\urllib3\util\retry.py", line 515, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='platform.deepseek.com', port=443): Max retries exceeded with url: /api_keys (Caused by ProxyError('Unable to connect to proxy', OSError(0, 'Error')))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\PycharmProjects\deepseek-assistant-main\app-streamlit.py", line 98, in query_deepseek
+    response = requests.post(API_URL, headers=headers, json=payload)
+  File "C:\Users\Administrator\PycharmProjects\deepseek-assistant-main\.venv\lib\site-packages\requests\api.py", line 115, in post
+    return request("post", url, data=data, json=json, **kwargs)
+  File "C:\Users\Administrator\PycharmProjects\deepseek-assistant-main\.venv\lib\site-packages\requests\api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "C:\Users\Administrator\PycharmProjects\deepseek-assistant-main\.venv\lib\site-packages\requests\sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\Administrator\PycharmProjects\deepseek-assistant-main\.venv\lib\site-packages\requests\sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\Administrator\PycharmProjects\deepseek-assistant-main\.venv\lib\site-packages\requests\adapters.py", line 513, in send
+    raise ProxyError(e, request=request)
+requests.exceptions.ProxyError: HTTPSConnectionPool(host='platform.deepseek.com', port=443): Max retries exceeded with url: /api_keys (Caused by ProxyError('Unable to connect to proxy', OSError(0, 'Error')))
